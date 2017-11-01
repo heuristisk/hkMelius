@@ -87,8 +87,6 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
                 }
                 return previous
             }
-            
-            node = node?.next
         }
         
         return nil

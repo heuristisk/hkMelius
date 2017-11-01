@@ -14,6 +14,7 @@
 		8B5B527A1FA957D000D79391 /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B52791FA957D000D79391 /* Rotation.swift */; };
 		8B5B527C1FA9581C00D79391 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B527B1FA9581C00D79391 /* Calculations.swift */; };
 		8B5B527E1FA9583500D79391 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B527D1FA9583500D79391 /* Search.swift */; };
+		8B5B52801FA9629A00D79391 /* Permutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B527F1FA9629A00D79391 /* Permutation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		8B5B52791FA957D000D79391 /* Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotation.swift; path = Array/Rotation.swift; sourceTree = "<group>"; };
 		8B5B527B1FA9581C00D79391 /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calculations.swift; path = Array/Calculations.swift; sourceTree = "<group>"; };
 		8B5B527D1FA9583500D79391 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Array/Search.swift; sourceTree = "<group>"; };
+		8B5B527F1FA9629A00D79391 /* Permutation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Permutation.swift; path = String/Permutation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				8B5B52731FA956A300D79391 /* String.swift */,
+				8B5B527F1FA9629A00D79391 /* Permutation.swift */,
 			);
 			name = String;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				8B5B527C1FA9581C00D79391 /* Calculations.swift in Sources */,
 				8B5B527A1FA957D000D79391 /* Rotation.swift in Sources */,
 				8B5B52741FA956A300D79391 /* String.swift in Sources */,
+				8B5B52801FA9629A00D79391 /* Permutation.swift in Sources */,
 				8B4FB4DB1FA9395B00E223AD /* LinkedList.swift in Sources */,
 				8B4FB4D31FA9390B00E223AD /* main.swift in Sources */,
 				8B5B527E1FA9583500D79391 /* Search.swift in Sources */,
