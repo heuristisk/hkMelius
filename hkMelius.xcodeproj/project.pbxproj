@@ -10,6 +10,7 @@
 		8B4FB4D31FA9390B00E223AD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FB4D21FA9390B00E223AD /* main.swift */; };
 		8B4FB4DB1FA9395B00E223AD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FB4DA1FA9395B00E223AD /* LinkedList.swift */; };
 		8B5B52741FA956A300D79391 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B52731FA956A300D79391 /* String.swift */; };
+		8B5B52771FA9577500D79391 /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B52761FA9577500D79391 /* Recursion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		8B4FB4D21FA9390B00E223AD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8B4FB4DA1FA9395B00E223AD /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = LinkedList/LinkedList.swift; sourceTree = "<group>"; };
 		8B5B52731FA956A300D79391 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = String/String.swift; sourceTree = "<group>"; };
+		8B5B52761FA9577500D79391 /* Recursion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recursion.swift; path = Recursion/Recursion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		8B4FB4D11FA9390B00E223AD /* hkMelius */ = {
 			isa = PBXGroup;
 			children = (
+				8B5B52751FA9576700D79391 /* Recursion */,
 				8B5B52721FA9568100D79391 /* String */,
 				8B4FB4D91FA9391B00E223AD /* Linkedlist */,
 				8B4FB4D21FA9390B00E223AD /* main.swift */,
@@ -82,6 +85,14 @@
 				8B5B52731FA956A300D79391 /* String.swift */,
 			);
 			name = String;
+			sourceTree = "<group>";
+		};
+		8B5B52751FA9576700D79391 /* Recursion */ = {
+			isa = PBXGroup;
+			children = (
+				8B5B52761FA9577500D79391 /* Recursion.swift */,
+			);
+			name = Recursion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5B52771FA9577500D79391 /* Recursion.swift in Sources */,
 				8B5B52741FA956A300D79391 /* String.swift in Sources */,
 				8B4FB4DB1FA9395B00E223AD /* LinkedList.swift in Sources */,
 				8B4FB4D31FA9390B00E223AD /* main.swift in Sources */,
