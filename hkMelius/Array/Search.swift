@@ -10,6 +10,58 @@ import Foundation
 
 class Array2D {
     
+    static func sudoku2(grid: [[Character]]) -> Bool {
+        
+        var columnContainer = [Int:Set<Character>]()
+        
+        for i in 0 ..< grid.count {
+            
+            var rowContainer = Set<Character>()
+            
+            for j in 0 ..< grid[0].count {
+                
+                let ch = grid[i][j]
+                
+                if ch != "." && (rowContainer.contains(ch) || columnContainer[j]?.contains(ch) ?? false){
+                    return false
+                } else if ch != "." {
+                    if columnContainer[j] == nil {
+                        columnContainer[j] = Set<Character>()
+                    }
+                    
+                    rowContainer.insert(ch)
+                    columnContainer[j]?.insert(ch)
+                }
+            }
+        }
+        
+        for col in [0,3,6] {
+            
+            for row in [0,3,6] {
+                
+                var squareContainer = Set<Character>()
+                
+                for i in col ..< col + 3 {
+                    for j in row ..< row + 3 {
+                        let ch = grid[i][j]
+                        
+                        if ch != "." {
+                            
+                            if squareContainer.contains(ch) {
+                                return false
+                            }
+                            
+                            squareContainer.insert(ch)
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+        return true
+    }
+    
     static func firstDuplicate(a: [Int]) -> Int {
         
         var array =  a

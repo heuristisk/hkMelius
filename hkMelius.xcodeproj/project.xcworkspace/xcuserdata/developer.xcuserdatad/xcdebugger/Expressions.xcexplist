@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LinkedList.tail.getter:LinkedList.swift">
+      </ContextState>
+      <ContextState
+         contextName = "firstDuplicate(a : [Int]) -&gt; Int:main.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "array[abs(array[i])]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

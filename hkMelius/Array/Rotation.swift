@@ -11,6 +11,12 @@ import Foundation
 
 class Rotation {
     
+    static func dummy() {
+
+    }
+    
+    var columnContainer = [Int:Set<Character>]()
+    
     static func rotateInPlace( input array : inout [[Int]]) {
         
         for layer in 0 ..< array.count/2  {
