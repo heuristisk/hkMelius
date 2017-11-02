@@ -18,8 +18,15 @@ import Foundation
 //print(l)
 
 
-let str = "cat"
+//let str = "cat"
+//
+//for p in str.getPermutations() {
+//    print(p)
+//}
+//
+var a = [2,2]
 
-for p in str.getPermutations() {
-    print(p)
-}
+
+
+
+print(Array2D.firstDuplicate(a: a))

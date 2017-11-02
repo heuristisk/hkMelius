@@ -21,6 +21,12 @@ extension String {
         return mode == .buffered ? checkIsUniqueBuffered() : checkIsUniqueNonBuffered()
     }
     
+    func firstNotRepeatingCharacter(s: String) -> Character {
+        
+        
+        return "_"
+    }
+    
     private func checkIsUniqueNonBuffered() -> Bool {
         
         for i in self.characters {

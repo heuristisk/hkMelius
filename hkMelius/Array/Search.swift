@@ -10,6 +10,34 @@ import Foundation
 
 class Array2D {
     
+    static func firstDuplicate(a: [Int]) -> Int {
+        
+        var array =  a
+        
+        for i in 0 ..< array.count {
+            if (array[abs(array[i]) - 1] >= 0) {
+                array[abs(array[i]) - 1] *= -1
+            }
+            else {
+                return abs(array[i])
+            }
+        }
+        return -1
+    }
+    
+    static func firstDuplicate2(a: [Int]) -> Int {
+        var set:Set<Int> = Set()
+        for i in a {
+            if(set.contains(i)) {
+                return i;
+            } else {
+                set.insert(i);
+            }
+        }
+        return -1;
+    }
+
+    
     static func find(array: [[Int]], value: Int) -> (row: Int, col: Int)? {
         
         let rows = array.count
