@@ -35,39 +35,59 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
         }
     }
     
-    func delete(value: T) {
+    func delete(k: T) {
         
         var temp = head;
+        var previous: Node? = nil
         
-        if (value == temp?.value)
-        {
-            head = temp?.next
-            return
-        }
-        
-        while temp?.next != nil {
-            if value == temp?.next?.value {
-                temp?.next =  temp?.next?.next
+        while temp != nil {
+            if k == temp?.value {
+                
+                if previous == nil {
+                    head = temp?.next
+                    temp = head
+                    continue
+                } else {
+                    previous?.next = temp?.next
+                }
+            } else {
+                previous = temp
             }
             
-            temp = temp?.next;
+            temp = temp?.next
         }
     }
     
-    func reverse() {
+    func reverse(node: Node?) -> Node? {
         
-        var current = head;
-        var previous: Node? = nil
-        var incoming: Node? = nil
+        var node = node
+        var head: Node? = nil
         
-        while current != nil {
-            incoming = current?.next
-            current?.next = previous
-            previous = current
-            current = incoming;
+        while node != nil {
+            let n = Node(value: node!.value)
+            n.next = head
+            head = n
+            node = node?.next
         }
         
-        head = previous;
+        return head
+    }
+    
+    func isListPalindrome(node: Node?) -> Bool {
+        
+        var reversedList = reverse(node: node)
+        var temp = node
+        
+        while (temp != nil && reversedList != nil) {
+            if temp?.value != reversedList?.value {
+                return false
+            }
+            
+            temp = temp?.next
+            reversedList = reversedList?.next
+        }
+        
+        return reversedList == nil && temp == nil
     }
     
     func detectCycle(disconnect: Bool = false) -> Node? {
