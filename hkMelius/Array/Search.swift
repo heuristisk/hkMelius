@@ -10,6 +10,35 @@ import Foundation
 
 class Array2D {
     
+    static func sudoku1(grid: [[Character]]) -> Bool {
+        
+        var seen = Set<String>()
+        
+        for i in 0 ..< 9 {
+            for j in 0 ..< 9 {
+                if grid[i][j] != "." {
+                    let value = String(grid[i][j])
+                    
+                    let row = "row \(i): \(value)"
+                    let col = "col \(j): \(value)"
+                    let sub = "sub \(i/3)|\(j/3): \(value)"
+                    
+                    if seen.contains(row) || seen.contains(col) || seen.contains(sub) {
+                        return false
+                    }
+                    else {
+                        seen.insert(row)
+                        seen.insert(col)
+                        seen.insert(sub)
+                    }
+                }
+            }
+        }
+        
+        return true
+        
+    }
+    
     static func sudoku2(grid: [[Character]]) -> Bool {
         
         var columnContainer = [Int:Set<Character>]()
