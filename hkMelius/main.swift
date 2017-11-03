@@ -23,15 +23,15 @@ import Foundation
 //
 // Definition for singly-linked list:
 
-let a = LinkedList.Node(value: 9876)
-a.next = LinkedList.Node(value: 5432)
-a.next?.next = LinkedList.Node(value: 1999)
+let a = LinkedList.Node(value: 1)
+a.next = LinkedList.Node(value: 3)
+a.next?.next = LinkedList.Node(value: 5)
 
-let b = LinkedList.Node(value: 1)
-b.next = LinkedList.Node(value: 8001)
+let b = LinkedList.Node(value: 2)
+b.next = LinkedList.Node(value: 4)
 
 
-let result = LinkedList(head: LinkedList.Node(value: 0)).addTwoHugeNumbers(a: a, b: b)
+let result = LinkedList(head: LinkedList.Node(value: 0)).mergeTwoLinkedLists(l1: a, l2: b)
 
 print(result)
 

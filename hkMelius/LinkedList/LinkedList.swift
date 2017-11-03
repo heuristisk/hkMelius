@@ -148,6 +148,30 @@ class LinkedList: CustomStringConvertible {
         return nil
     }
     
+    func mergeTwoLinkedLists(l1: Node?, l2: Node?) -> Node? {
+        
+        var result: Node?
+        
+        if l1 == nil {
+            return l2;
+        }
+        if l2 == nil {
+            return l1
+        }
+        
+        if (l1!.value <= l2!.value)
+        {
+            result = l1
+            result?.next = mergeTwoLinkedLists(l1: l1?.next,l2: l2)
+        } else {
+            result = l2
+            result?.next = mergeTwoLinkedLists(l1: l1,l2: l2?.next)
+        }
+        
+        return result
+    }
+    
+    
     func deleteDuplicateUsingBuffer() {
         
         var array = [Int]()
