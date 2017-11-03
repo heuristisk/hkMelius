@@ -21,27 +21,18 @@ import Foundation
 //    print(p)
 //}
 //
+// Definition for singly-linked list:
 
-/*
-var grid: [[Character]] =
-[[".","4",".",".",".",".",".",".","."],
-[".",".","4",".",".",".",".",".","."],
-[".",".",".","1",".",".","7",".","."],
-[".",".",".",".",".",".",".",".","."],
-[".",".",".","3",".",".",".","6","."],
-[".",".",".",".",".","6",".","9","."],
-[".",".",".",".","1",".",".",".","."],
-[".",".",".",".",".",".","2",".","."],
-[".",".",".","8",".",".",".",".","."]]
+let a = LinkedList.Node(value: 9876)
+a.next = LinkedList.Node(value: 5432)
+a.next?.next = LinkedList.Node(value: 1999)
 
-print(Array2D.sudoku2(grid: grid))
- */
+let b = LinkedList.Node(value: 1)
+b.next = LinkedList.Node(value: 8001)
 
 
+let result = LinkedList(head: LinkedList.Node(value: 0)).addTwoHugeNumbers(a: a, b: b)
 
+print(result)
 
-
-
-
-
-
+//[9876, 5434, 0]

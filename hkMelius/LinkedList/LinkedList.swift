@@ -1,6 +1,6 @@
 import Foundation
 
-class LinkedList<T: Equatable>: CustomStringConvertible {
+class LinkedList: CustomStringConvertible {
     
     var head: Node?
     var tail: Node? {
@@ -19,14 +19,14 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
     }
     
     class Node : Equatable, CustomStringConvertible {
-        var value: T
+        var value: Int
         var next: Node?
         
         public var description: String {
             return String("NODE [\(value)]")
         }
         
-        init(value: T) {
+        init(value: Int) {
             self.value = value
         }
         
@@ -35,7 +35,7 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
         }
     }
     
-    func delete(k: T) {
+    func delete(k: Int) {
         
         var temp = head;
         var previous: Node? = nil
@@ -72,6 +72,42 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
         
         return head
     }
+    
+    func addTwoHugeNumbers(a: Node?, b: Node?) -> Node? {
+        
+        return reverse(node: addLinkedList(a: reverse(node: a), b: reverse(node: b), carry: 0))
+    }
+    
+    func addLinkedList(a: Node?, b: Node?, carry: Int) -> Node? {
+        
+        if a == nil && b == nil && carry == 0 {
+            return nil
+        }
+        
+        let result = Node(value: 0)
+        
+        var value = carry
+        
+        if a != nil {
+            value += a!.value
+        }
+        
+        if b != nil {
+            value += b!.value
+        }
+        
+        result.value = value % 10000
+        
+        if a != nil || b != nil {
+            let more = addLinkedList(a: a == nil ? nil : a?.next,
+                                     b: b == nil ? nil : b?.next,
+                                     carry: value >= 10000 ? 1 : 0)
+            result.next = more
+        }
+        
+        return result
+    }
+
     
     func isListPalindrome(node: Node?) -> Bool {
         
@@ -114,7 +150,7 @@ class LinkedList<T: Equatable>: CustomStringConvertible {
     
     func deleteDuplicateUsingBuffer() {
         
-        var array = [T]()
+        var array = [Int]()
         var current: Node? = self.head
         var previous: Node? = nil
         
