@@ -58,6 +58,48 @@ class LinkedList: CustomStringConvertible {
         }
     }
     
+    func rearrangeLastN(l: Node?, n: Int) -> Node? {
+        
+        if n == 0 {
+            return l
+        }
+        
+        let head = l
+        var pointer = head
+        var tail = head
+        var finalhead = head
+        var tolink = head
+        var size = 0
+
+        while (pointer != nil) {
+            size += 1
+            if pointer?.next == nil {
+                tail = pointer
+            }
+            pointer = pointer?.next
+        }
+        
+        var steps = size - n
+        pointer = head
+        
+        while (steps > 0) {
+            steps -= 1
+            if steps == 0 {
+                tolink = pointer
+                finalhead = pointer?.next
+                tail?.next = head
+                tolink?.next = nil
+            }
+            
+            pointer = pointer?.next
+        }
+
+        
+        return finalhead
+    }
+    
+
+    
     func reverse(node: Node?) -> Node? {
         
         var node = node

@@ -22,17 +22,22 @@ import Foundation
 //}
 //
 // Definition for singly-linked list:
-
-let a = LinkedList.Node(value: 1)
-a.next = LinkedList.Node(value: 3)
-a.next?.next = LinkedList.Node(value: 5)
-
-let b = LinkedList.Node(value: 2)
-b.next = LinkedList.Node(value: 4)
+//123, 456, 789, 0
 
 
-let result = LinkedList(head: LinkedList.Node(value: 0)).mergeTwoLinkedLists(l1: a, l2: b)
+let root = Tree<Int>(3)
 
-print(result)
+root.left = Tree<Int>(1)
+root.right = Tree<Int>(5)
 
-//[9876, 5434, 0]
+
+root.right?.left = Tree<Int>(4)
+root.right?.right = Tree<Int>(6)
+
+
+var acc = [Int]()
+root.traverseInOrder(process: { v in acc.append(v) })
+
+let a = root.search(value: 5)
+print(a)
+

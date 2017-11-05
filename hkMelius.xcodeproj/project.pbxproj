@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1EE5A11FAE60ED0070748F /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1EE5A01FAE60ED0070748F /* Tree.swift */; };
 		8B4FB4D31FA9390B00E223AD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FB4D21FA9390B00E223AD /* main.swift */; };
 		8B4FB4DB1FA9395B00E223AD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FB4DA1FA9395B00E223AD /* LinkedList.swift */; };
 		8B5B52741FA956A300D79391 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B52731FA956A300D79391 /* String.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8B1EE5A01FAE60ED0070748F /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tree.swift; path = Tree/Tree.swift; sourceTree = "<group>"; };
 		8B4FB4CF1FA9390B00E223AD /* hkMelius */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hkMelius; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4FB4D21FA9390B00E223AD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8B4FB4DA1FA9395B00E223AD /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = LinkedList/LinkedList.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B1EE59F1FAE60D00070748F /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				8B1EE5A01FAE60ED0070748F /* Tree.swift */,
+			);
+			name = Tree;
+			sourceTree = "<group>";
+		};
 		8B4FB4C61FA9390B00E223AD = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		8B4FB4D11FA9390B00E223AD /* hkMelius */ = {
 			isa = PBXGroup;
 			children = (
+				8B1EE59F1FAE60D00070748F /* Tree */,
 				8B5B52781FA957BD00D79391 /* Array */,
 				8B5B52751FA9576700D79391 /* Recursion */,
 				8B5B52721FA9568100D79391 /* String */,
@@ -177,6 +188,7 @@
 				8B5B52771FA9577500D79391 /* Recursion.swift in Sources */,
 				8B5B527C1FA9581C00D79391 /* Calculations.swift in Sources */,
 				8B5B527A1FA957D000D79391 /* Rotation.swift in Sources */,
+				8B1EE5A11FAE60ED0070748F /* Tree.swift in Sources */,
 				8B5B52741FA956A300D79391 /* String.swift in Sources */,
 				8B5B52801FA9629A00D79391 /* Permutation.swift in Sources */,
 				8B4FB4DB1FA9395B00E223AD /* LinkedList.swift in Sources */,
