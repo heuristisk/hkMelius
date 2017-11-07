@@ -16,6 +16,10 @@
 		8B5B527C1FA9581C00D79391 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B527B1FA9581C00D79391 /* Calculations.swift */; };
 		8B5B527E1FA9583500D79391 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B527D1FA9583500D79391 /* Search.swift */; };
 		8B5B52801FA9629A00D79391 /* Permutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B527F1FA9629A00D79391 /* Permutation.swift */; };
+		8B6BEB891FAF97F3001E1CFE /* Restore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEB881FAF97F3001E1CFE /* Restore.swift */; };
+		8B6BEB8E1FAFC1B5001E1CFE /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEB8D1FAFC1B5001E1CFE /* Hash.swift */; };
+		8B6BEB911FAFCA67001E1CFE /* PeopleAlive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEB901FAFCA67001E1CFE /* PeopleAlive.swift */; };
+		8B6BEB941FB1524B001E1CFE /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEB931FB1524B001E1CFE /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +45,10 @@
 		8B5B527B1FA9581C00D79391 /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calculations.swift; path = Array/Calculations.swift; sourceTree = "<group>"; };
 		8B5B527D1FA9583500D79391 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Array/Search.swift; sourceTree = "<group>"; };
 		8B5B527F1FA9629A00D79391 /* Permutation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Permutation.swift; path = String/Permutation.swift; sourceTree = "<group>"; };
+		8B6BEB881FAF97F3001E1CFE /* Restore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restore.swift; sourceTree = "<group>"; };
+		8B6BEB8D1FAFC1B5001E1CFE /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hash.swift; path = Hash/Hash.swift; sourceTree = "<group>"; };
+		8B6BEB901FAFCA67001E1CFE /* PeopleAlive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleAlive.swift; path = PeopleAlive/PeopleAlive.swift; sourceTree = "<group>"; };
+		8B6BEB931FB1524B001E1CFE /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Int.swift; path = Int/Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				8B1EE5A01FAE60ED0070748F /* Tree.swift */,
+				8B6BEB881FAF97F3001E1CFE /* Restore.swift */,
 			);
 			name = Tree;
 			sourceTree = "<group>";
@@ -81,6 +90,9 @@
 		8B4FB4D11FA9390B00E223AD /* hkMelius */ = {
 			isa = PBXGroup;
 			children = (
+				8B6BEB921FB1523C001E1CFE /* Int */,
+				8B6BEB8F1FAFCA47001E1CFE /* PeopleAlive */,
+				8B6BEB8C1FAFC193001E1CFE /* Hash */,
 				8B1EE59F1FAE60D00070748F /* Tree */,
 				8B5B52781FA957BD00D79391 /* Array */,
 				8B5B52751FA9576700D79391 /* Recursion */,
@@ -124,6 +136,30 @@
 				8B5B527D1FA9583500D79391 /* Search.swift */,
 			);
 			name = Array;
+			sourceTree = "<group>";
+		};
+		8B6BEB8C1FAFC193001E1CFE /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				8B6BEB8D1FAFC1B5001E1CFE /* Hash.swift */,
+			);
+			name = Hash;
+			sourceTree = "<group>";
+		};
+		8B6BEB8F1FAFCA47001E1CFE /* PeopleAlive */ = {
+			isa = PBXGroup;
+			children = (
+				8B6BEB901FAFCA67001E1CFE /* PeopleAlive.swift */,
+			);
+			name = PeopleAlive;
+			sourceTree = "<group>";
+		};
+		8B6BEB921FB1523C001E1CFE /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				8B6BEB931FB1524B001E1CFE /* Int.swift */,
+			);
+			name = Int;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6BEB8E1FAFC1B5001E1CFE /* Hash.swift in Sources */,
+				8B6BEB941FB1524B001E1CFE /* Int.swift in Sources */,
 				8B5B52771FA9577500D79391 /* Recursion.swift in Sources */,
+				8B6BEB911FAFCA67001E1CFE /* PeopleAlive.swift in Sources */,
 				8B5B527C1FA9581C00D79391 /* Calculations.swift in Sources */,
 				8B5B527A1FA957D000D79391 /* Rotation.swift in Sources */,
 				8B1EE5A11FAE60ED0070748F /* Tree.swift in Sources */,
@@ -193,6 +232,7 @@
 				8B5B52801FA9629A00D79391 /* Permutation.swift in Sources */,
 				8B4FB4DB1FA9395B00E223AD /* LinkedList.swift in Sources */,
 				8B4FB4D31FA9390B00E223AD /* main.swift in Sources */,
+				8B6BEB891FAF97F3001E1CFE /* Restore.swift in Sources */,
 				8B5B527E1FA9583500D79391 /* Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

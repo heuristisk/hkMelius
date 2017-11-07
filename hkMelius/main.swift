@@ -34,10 +34,37 @@ root.right = Tree<Int>(5)
 root.right?.left = Tree<Int>(4)
 root.right?.right = Tree<Int>(6)
 
+//var people = [Person]()
+//
+//people.append(Person(birthYear: 1999, deathYear: 2015))
+//people.append(Person(birthYear: 2000, deathYear: 2016))
+//
+//
+//Population().calcMostAliveYear(people: people)
 
-var acc = [Int]()
-root.traverseInOrder(process: { v in acc.append(v) })
+func adjacentElementsProduct(inputArray: [Int]) -> Int {
 
-let a = root.search(value: 5)
-print(a)
+    var maxValuePosition = 0
+    var maxValue = inputArray.first ?? 0
+    let maxIndex = (inputArray.count - 1)
+    
+    for i in 0 ... maxIndex {
+        if inputArray[i] > maxValue {
+            maxValue = inputArray[i]
+            maxValuePosition = i
+        }
+    }
 
+    if maxValuePosition == maxIndex {
+        return inputArray[maxValuePosition] * inputArray[maxValuePosition-1]
+    } else if maxValuePosition == 0 {
+        return inputArray[maxValuePosition] * inputArray[maxValuePosition+1]
+    } else {
+        let a = inputArray[maxValuePosition] * inputArray[maxValuePosition-1]
+        let b = inputArray[maxValuePosition] * inputArray[maxValuePosition+1]
+
+        return (a > b) ? a : b
+    }
+}
+
+adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])

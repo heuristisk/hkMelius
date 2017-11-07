@@ -64,4 +64,18 @@ extension String {
         
         return true
     }
+
+    func commonCharacterCount(s1: String, s2: String) -> Int {
+
+
+        var s1 = s1
+        var count = 0
+        for char in s2.characters {
+            if let index = s1.characters.index(of: char) {
+                s1.remove(at: index)
+                count += 1
+            }
+        }
+        return count
+    }
 }

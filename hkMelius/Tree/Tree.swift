@@ -9,6 +9,7 @@
 import Foundation
 
 public class Tree<T: Comparable> {
+
     public var value: T
     public var left: Tree<T>?
     public var right: Tree<T>?

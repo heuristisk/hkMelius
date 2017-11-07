@@ -3,15 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "LinkedList.tail.getter:LinkedList.swift">
-      </ContextState>
-      <ContextState
          contextName = "firstDuplicate(a : [Int]) -&gt; Int:main.swift">
          <PersistentStrings>
             <PersistentString
                value = "array[abs(array[i])]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Population.calcMostAliveYear(people : [Person]) -&gt; Int:PeopleAlive.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "populationAlive">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LinkedList.tail.getter:LinkedList.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static Tree.kthSmallestInBST(t : Tree&lt;Int&gt;?, k : Int) -&gt; Int:Tree.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Population.initData(people : [Person]) -&gt; ():PeopleAlive.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
