@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B6BEBA21FB27C90001E1CFE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEBA11FB27C90001E1CFE /* main.swift */; };
+		8B6BEBAA1FB3C501001E1CFE /* PeopleAlive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEBA91FB3C501001E1CFE /* PeopleAlive.swift */; };
+		8B6BEBAC1FB3C5E2001E1CFE /* MaxMinDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BEBAB1FB3C5E2001E1CFE /* MaxMinDiff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		8B6BEB9E1FB27C90001E1CFE /* CrackingTheCodingInterview */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CrackingTheCodingInterview; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6BEBA11FB27C90001E1CFE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8B6BEBA91FB3C501001E1CFE /* PeopleAlive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleAlive.swift; sourceTree = "<group>"; };
+		8B6BEBAB1FB3C5E2001E1CFE /* MaxMinDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxMinDiff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,19 @@
 		8B6BEBA01FB27C90001E1CFE /* CrackingTheCodingInterview */ = {
 			isa = PBXGroup;
 			children = (
+				8B6BEBA81FB3C4EF001E1CFE /* Moderate */,
 				8B6BEBA11FB27C90001E1CFE /* main.swift */,
 			);
 			path = CrackingTheCodingInterview;
+			sourceTree = "<group>";
+		};
+		8B6BEBA81FB3C4EF001E1CFE /* Moderate */ = {
+			isa = PBXGroup;
+			children = (
+				8B6BEBA91FB3C501001E1CFE /* PeopleAlive.swift */,
+				8B6BEBAB1FB3C5E2001E1CFE /* MaxMinDiff.swift */,
+			);
+			name = Moderate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6BEBAA1FB3C501001E1CFE /* PeopleAlive.swift in Sources */,
+				8B6BEBAC1FB3C5E2001E1CFE /* MaxMinDiff.swift in Sources */,
 				8B6BEBA21FB27C90001E1CFE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
