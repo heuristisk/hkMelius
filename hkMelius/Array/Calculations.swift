@@ -9,7 +9,26 @@
 import Foundation
 
 class Calculation {
-    
+
+    func minesweeper(matrix: [[Bool]]) -> [[Int]] {
+        var m = matrix.map { $0.map { $0 ? 1 : 0 } }
+        var new = m.map { $0.map { _ in 0 } }
+
+        for r in 0 ..< m.count {
+            for c in 0 ..< m[r].count {
+
+                for r1 in max(r-1,0)...min(r+1,m.count-1) {
+                    for c1 in max(c-1,0)...min(c+1,m[r].count-1) {
+                        if r1 != r || c1 != c {
+                            new[r][c] += m[r1][c1]
+                        }
+                    }
+                }
+            }
+        }
+        return new
+    }
+
     static func isCryptSolution(crypt: [String], solution: [[Character]]) -> Bool {
         
         var map = convertToDictionary(solution: solution)
