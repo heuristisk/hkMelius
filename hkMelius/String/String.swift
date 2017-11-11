@@ -78,4 +78,11 @@ extension String {
         }
         return count
     }
+
+    func isVariableNamePattern(name: String) -> Bool {
+        let pat = "^[a-zA-Z_][a-zA-Z0-9_]*$"
+        let regex = try! NSRegularExpression(pattern: pat, options: [])
+        let matches = regex.matches(in: name, options: [], range: NSRange(location: 0, length: name.characters.count))
+        return matches.count == 1
+    }
 }
