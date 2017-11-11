@@ -63,6 +63,28 @@ class Calculation {
         
         return result
     }
+
+    func rotateByOneRight(matrix: inout [Int], offset: Int) -> [Int] {
+
+        for n in 1 ..< offset {
+            for i in (0 ..< (matrix.count - 1)).reversed() {
+                swap(&matrix[i], &matrix[(i+1) % matrix.count])
+            }
+        }
+
+        return matrix
+    }
+
+    func rotateByOneLeft(matrix: inout [Int], offset: Int) -> [Int] {
+
+        for n in 1 ..< offset {
+            for i in 0 ..< matrix.count - 1 {
+                swap(&matrix[i], &matrix[(i+1) % matrix.count])
+            }
+        }
+        
+        return matrix
+    }
 }
 
 extension Array where Iterator.Element == Int {
