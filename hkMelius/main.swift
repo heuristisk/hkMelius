@@ -69,25 +69,7 @@ root.right?.right = Tree<Int>(6)
 //
 //adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])
 
-func composeRanges(nums: [Int]) -> [String] {
-    var ranges = [String]()
-    if nums.count == 0 {
-        return ranges
-    }
-    var first = nums[0]
-    var last = nums[0]
-    for i in 1..<nums.count {
-        if nums[i] > nums[i-1] + 1 {
-            ranges.append(first == last ? "\(first)" : "\(first)->\(last)")
-            first = nums[i]
-        }
-        last = nums[i]
-    }
-    ranges.append(first == last ? "\(first)" : "\(first)->\(last)")
-    return ranges
-}
-
-print(composeRanges(nums: [1,2,3,4,6,7,8,9]))
+print(Inteiro().mapDecoding(message: "2871221111122261"))
 
 
 

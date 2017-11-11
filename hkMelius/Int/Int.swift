@@ -37,5 +37,37 @@ class Inteiro {
         return ranges
     }
 
+    func mapDecoding(message: String) -> Int {
+
+        var prev = 0
+        var count = 0
+        var curr = 1
+        let array = Array(message.utf8.map({Int($0) - 48}))
+
+        for i in 0 ..< array.count {
+            let digit = array[i]
+            var number = 0
+
+            if i > 0 {
+                number = array[i - 1] * 10 + digit;
+            }
+
+            if digit > 0 {
+                count = curr
+            }
+
+            if number <= 26 && number > 9 {
+                count += prev
+            }
+            
+            prev = curr;
+            curr = count % 1000000007;
+            count = 0;
+        }
+        
+        return curr
+    }
+    
+    
 
 }
