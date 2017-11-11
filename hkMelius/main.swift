@@ -42,29 +42,65 @@ root.right?.right = Tree<Int>(6)
 //
 //Population().calcMostAliveYear(people: people)
 
-func adjacentElementsProduct(inputArray: [Int]) -> Int {
+//func adjacentElementsProduct(inputArray: [Int]) -> Int {
+//
+//    var maxValuePosition = 0
+//    var maxValue = inputArray.first ?? 0
+//    let maxIndex = (inputArray.count - 1)
+//    
+//    for i in 0 ... maxIndex {
+//        if inputArray[i] > maxValue {
+//            maxValue = inputArray[i]
+//            maxValuePosition = i
+//        }
+//    }
+//
+//    if maxValuePosition == maxIndex {
+//        return inputArray[maxValuePosition] * inputArray[maxValuePosition-1]
+//    } else if maxValuePosition == 0 {
+//        return inputArray[maxValuePosition] * inputArray[maxValuePosition+1]
+//    } else {
+//        let a = inputArray[maxValuePosition] * inputArray[maxValuePosition-1]
+//        let b = inputArray[maxValuePosition] * inputArray[maxValuePosition+1]
+//
+//        return (a > b) ? a : b
+//    }
+//}
+//
+//adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])
 
-    var maxValuePosition = 0
-    var maxValue = inputArray.first ?? 0
-    let maxIndex = (inputArray.count - 1)
-    
-    for i in 0 ... maxIndex {
-        if inputArray[i] > maxValue {
-            maxValue = inputArray[i]
-            maxValuePosition = i
+
+func rotateImage(a: inout [[Int]]) -> [[Int]] {
+
+    for layer in 0 ..< a.count/2  {
+        let first = layer
+        let last = a.count - 1 - first;
+
+        for i in first ..< last {
+            let offset = i - first
+            let top = a[first][i];
+            a[first][i] = a[last - offset][first]
+            a[last - offset][first] = a[last][last - offset]
+            a[last][last - offset] = a[i][last]
+            a[i][last] = top
         }
     }
 
-    if maxValuePosition == maxIndex {
-        return inputArray[maxValuePosition] * inputArray[maxValuePosition-1]
-    } else if maxValuePosition == 0 {
-        return inputArray[maxValuePosition] * inputArray[maxValuePosition+1]
-    } else {
-        let a = inputArray[maxValuePosition] * inputArray[maxValuePosition-1]
-        let b = inputArray[maxValuePosition] * inputArray[maxValuePosition+1]
-
-        return (a > b) ? a : b
-    }
+    return a
 }
 
-adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])
+
+var array = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12],
+    [13,14,15,16]
+]
+for i in rotateImage(a: &array) {
+    print(i)
+}
+
+
+
+
+

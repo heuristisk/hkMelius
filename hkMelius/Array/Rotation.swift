@@ -16,6 +16,23 @@ class Rotation {
     }
     
     var columnContainer = [Int:Set<Character>]()
+
+    func rorateImageCounterClockWise(matrix: inout [[Int]]) -> [[Int]] {
+
+        let n = matrix[0].count
+        var tmp = 0
+        for i in 0 ..< n/2 {
+            for j in i ..< n - i - 1 {
+                tmp = matrix[i][j]
+                matrix[i][j] = matrix[j][n - i - 1]
+                matrix[j][n - i - 1] = matrix[n - i - 1][n - j - 1]
+                matrix[n - i - 1][n - j - 1] = matrix[n - j - 1][i]
+                matrix[n - j - 1][i] = tmp
+            }
+            
+        }
+        return matrix;
+    }
     
     static func rotateInPlace( input array : inout [[Int]]) {
         

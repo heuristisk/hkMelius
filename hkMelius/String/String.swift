@@ -85,4 +85,9 @@ extension String {
         let matches = regex.matches(in: name, options: [], range: NSRange(location: 0, length: name.characters.count))
         return matches.count == 1
     }
+
+    func alphabeticShift(inputString: String) -> String {
+        let a = inputString.utf8.map{ ($0 - 96) % 26 + 1 + 96 }
+        return String(bytes: a, encoding: String.Encoding.utf8) ?? ""
+    }
 }
