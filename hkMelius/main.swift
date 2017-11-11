@@ -69,37 +69,25 @@ root.right?.right = Tree<Int>(6)
 //
 //adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])
 
-
-func rotateImage(a: inout [[Int]]) -> [[Int]] {
-
-    for layer in 0 ..< a.count/2  {
-        let first = layer
-        let last = a.count - 1 - first;
-
-        for i in first ..< last {
-            let offset = i - first
-            let top = a[first][i];
-            a[first][i] = a[last - offset][first]
-            a[last - offset][first] = a[last][last - offset]
-            a[last][last - offset] = a[i][last]
-            a[i][last] = top
-        }
+func composeRanges(nums: [Int]) -> [String] {
+    var ranges = [String]()
+    if nums.count == 0 {
+        return ranges
     }
-
-    return a
+    var first = nums[0]
+    var last = nums[0]
+    for i in 1..<nums.count {
+        if nums[i] > nums[i-1] + 1 {
+            ranges.append(first == last ? "\(first)" : "\(first)->\(last)")
+            first = nums[i]
+        }
+        last = nums[i]
+    }
+    ranges.append(first == last ? "\(first)" : "\(first)->\(last)")
+    return ranges
 }
 
-
-var array = [
-    [1,2,3,4],
-    [5,6,7,8],
-    [9,10,11,12],
-    [13,14,15,16]
-]
-for i in rotateImage(a: &array) {
-    print(i)
-}
-
+print(composeRanges(nums: [1,2,3,4,6,7,8,9]))
 
 
 

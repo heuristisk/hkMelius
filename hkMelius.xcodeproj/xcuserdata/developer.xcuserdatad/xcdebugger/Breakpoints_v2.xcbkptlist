@@ -180,16 +180,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hkMelius/main.swift"
-            timestampString = "532118666.062814"
+            timestampString = "532131269.211815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
-            landmarkName = "rotateImage(a:)"
+            landmarkName = "composeRanges(nums:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -200,12 +200,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hkMelius/main.swift"
-            timestampString = "532118665.78778"
+            timestampString = "532131327.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "rotateImage(a:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "composeRanges(nums:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hkMelius/main.swift"
+            timestampString = "532131335.049768"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "composeRanges(nums:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
