@@ -69,9 +69,40 @@ root.right?.right = Tree<Int>(6)
 //
 //adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])
 
-var array = [4,5,6,7,8,9,1,2,3]
+import Foundation
 
-print(Array2D.findRotationPoint(in: array))
+func swapLexOrder(str: String, pairs: [[Int]]) -> String {
+
+    var result = [UInt8]()
+    var max = 0
+    var array = str.utf8.map({UInt8($0)})
+
+    for i in 0 ..< pairs.count {
+
+        let r = swapper(positions: &array, array: pairs[i])
+        if r > max {
+            max = r
+            result = array
+        }
+    }
+
+    return String(bytes: result, encoding: String.Encoding.utf8) ?? ""
+}
+
+func swapper(positions: inout [UInt8], array: [Int]) -> Int {
+    swap(&positions[array[0]-1],&positions[array[1]-1])
+
+    var sum = 0
+
+    positions.forEach({
+        sum += Int($0)
+    })
+
+    return sum
+}
+
+print(swapLexOrder(str: "abdc", pairs: [[1, 4], [3, 4]]))
+
 
 
 
