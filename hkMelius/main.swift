@@ -69,7 +69,9 @@ root.right?.right = Tree<Int>(6)
 //
 //adjacentElementsProduct(inputArray: [3, 6, -2, -5, 7, 3])
 
-print(Inteiro().mapDecoding(message: "2871221111122261"))
+var array = [4,5,6,7,8,9,1,2,3]
+
+print(Array2D.findRotationPoint(in: array))
 
 
 

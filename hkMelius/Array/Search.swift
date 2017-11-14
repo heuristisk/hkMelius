@@ -9,7 +9,29 @@
 import Foundation
 
 class Array2D {
-    
+
+
+    static func findRotationPoint(in numbers: [Int]) -> Int {
+        let firstRef = numbers[0]
+
+        var low = 0
+        var high = numbers.count - 1
+
+        while low < high {
+            let guessIndex = low + ((high - low) / 2)
+            if numbers[guessIndex] >= firstRef {
+                low = guessIndex
+            } else {
+                high = guessIndex
+            }
+
+            if (low + 1) == high {
+                break
+            }
+        }
+        return high
+    }
+
     static func sudoku1(grid: [[Character]]) -> Bool {
         
         var seen = Set<String>()
